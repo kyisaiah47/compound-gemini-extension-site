@@ -1,0 +1,5 @@
+{
+  "product": "ParseRail for Gemini CLI",
+  "tagline": "ParseRail tools in a Gemini CLI session",
+  "description": "Registers the parserail MCP server in Gemini CLI."
+}

@@ -10,6 +10,8 @@ const SITE = `https://${PRODUCT.host}`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE), title: PRODUCT.name, description: PRODUCT.description,
   alternates: { canonical: SITE }, icons: { icon: '/icon.svg' },
+  openGraph: { title: `${PRODUCT.name} — ${PRODUCT.headline.replace(/\.$/, '')}`, description: `Registers the parserail MCP server in Gemini CLI. ${PRODUCT.description}`, url: SITE, siteName: PRODUCT.name, type: 'website' },
+  twitter: { card: 'summary_large_image', title: PRODUCT.name, description: 'Registers the parserail MCP server in Gemini CLI.' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
