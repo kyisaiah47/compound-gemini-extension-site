@@ -46,3 +46,7 @@ CLAUDE.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cloudflare (OpenNext) build output
+/.open-next/
+/.wrangler/
