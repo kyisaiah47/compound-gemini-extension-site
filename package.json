@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/patch-next-agent-rules.mjs",
     "dev": "next dev -p 3319",
     "build": "next build",
+    "postinstall": "node scripts/patch-next-agent-rules.mjs",
     "start": "next start -p 3319",
     "check": "node scripts/check-register.mjs",
     "icons": "node scripts/icons.mjs",
