@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
+import '@/components/site-view/simple.css';
+import SiteViewProvider from '@/components/site-view/SiteViewProvider';
+import Welcome from '@/components/site-view/Welcome';
+import Mark from '@/components/site-view/Mark';
 import SmoothScroll from '@/components/SmoothScroll';
 import { PRODUCT } from '@/lib/product';
 
@@ -10,7 +14,7 @@ const SITE = `https://${PRODUCT.host}`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE), title: PRODUCT.name, description: PRODUCT.description,
   alternates: { canonical: SITE }, icons: { icon: '/icon.svg' },
-  openGraph: { title: `${PRODUCT.name} — ${PRODUCT.headline.replace(/\.$/, '')}`, description: `Registers the parserail MCP server in Gemini CLI. ${PRODUCT.description}`, url: SITE, siteName: PRODUCT.name, type: 'website' },
+  openGraph: { title: `${PRODUCT.name}: ${PRODUCT.headline.replace(/\.$/, '')}`, description: `Registers the parserail MCP server in Gemini CLI. ${PRODUCT.description}`, url: SITE, siteName: PRODUCT.name, type: 'website' },
   twitter: { card: 'summary_large_image', title: PRODUCT.name, description: 'Registers the parserail MCP server in Gemini CLI.' },
 };
 
@@ -21,6 +25,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       description: PRODUCT.description, codeRepository: PRODUCT.repo, version: PRODUCT.version,
       publisher: { '@type': 'Organization', '@id': 'https://thecompound.tech/#organization', name: 'Compound Labs', url: 'https://thecompound.tech' },
     }).replace(/</g, '\\u003c') }} />
-    <SmoothScroll />{children}
+    <SmoothScroll />
+    <SiteViewProvider slug="compound-gemini-extension" welcome={<Welcome copy={{
+      name: PRODUCT.name,
+      mark: <Mark />,
+      eyebrow: 'GEMINI CLI. YOUR DOCUMENTS.',
+      question: 'Can Gemini CLI read your invoices and statements?',
+      explain: 'This extension adds the ParseRail tools to Gemini CLI. Gemini can then turn a document into structured data in your session.',
+      illustration: { head: 'ONE SESSION. ONE DOCUMENT.', before: 'You ask Gemini to read a supplier invoice.', answer: 'Gemini calls the invoice tool and gets the fields back.', tag: 'A FAILED CALL COSTS NOTHING', after: 'You install it with one command.' },
+    }} />}>{children}</SiteViewProvider>
   </body></html>;
 }
