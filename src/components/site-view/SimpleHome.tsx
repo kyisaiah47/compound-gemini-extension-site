@@ -25,7 +25,7 @@ export default function SimpleHome() {
           <h1>{PRODUCT.headline}</h1>
           <p>{PRODUCT.description}</p>
           <div className="sv-qualifier">
-            Version {PRODUCT.version}. MIT licence. It needs Node.js 18 or later.
+            This is version {PRODUCT.version}. It uses the MIT licence and requires Node.js 18 or later.
           </div>
         </div>
 
@@ -45,7 +45,7 @@ export default function SimpleHome() {
         <div className="sv-section-intro">
           <div>
             <span className="sv-eyebrow">02 / WHAT GEMINI GETS</span>
-            <h2>Tools Gemini can call.</h2>
+            <h2>Gemini can call these tools.</h2>
           </div>
           <p>Pick a group to see the tools the bundled GEMINI.md tells Gemini to use.</p>
         </div>
@@ -79,7 +79,7 @@ export default function SimpleHome() {
               The document tools accept exactly one input source: fileUrl, text, or fileBase64 with fileMimeType.
             </p>
           </Disclosure>
-          <Disclosure title="What the extension registers">
+          <Disclosure title="The extension registers these items.">
             <dl className="sv-facts">
               {REGISTRATION.map((r) => (
                 <div key={r.field}>
@@ -105,11 +105,11 @@ export default function SimpleHome() {
         </div>
         <div className="sv-cards">
           <div>
-            <h3>Free to install.</h3>
+            <h3>You can install the extension for free.</h3>
             <p>The extension and its source are on GitHub under the MIT licence.</p>
           </div>
           <div>
-            <h3>Your key, your account.</h3>
+            <h3>Your calls use your key and account.</h3>
             <p>Calls use the ParseRail API key you give the installer, kept in PARSERAIL_API_KEY.</p>
           </div>
           <div>
