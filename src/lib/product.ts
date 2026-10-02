@@ -12,8 +12,8 @@ export const PRODUCT = {
   accent: '#E492C9',
   accentHover: '#F8A5DC',
   version: '0.2.0',
-  repo: 'https://github.com/kyisaiah47/compound-gemini-extension',
-  install: 'gemini extensions install https://github.com/kyisaiah47/compound-gemini-extension',
+  repo: 'https://github.com/kyisaiah47/parserail-gemini-extension',
+  install: 'gemini extensions install https://github.com/kyisaiah47/parserail-gemini-extension',
   headline: 'ParseRail tools in a Gemini CLI session.',
   description: 'This extension registers the parserail MCP server and its context instructions into Gemini CLI.',
 } as const;
@@ -22,7 +22,7 @@ export const READ_ON = '2026-09-30';
 
 export const SOURCES = [
   { id: 'readme-title', cite: 'README.md', quote: '# ParseRail for Gemini CLI', url: `${PRODUCT.repo}/blob/main/README.md`, read_at: READ_ON },
-  { id: 'readme-install', cite: 'README.md', quote: 'gemini extensions install https://github.com/kyisaiah47/compound-gemini-extension', url: `${PRODUCT.repo}/blob/main/README.md`, read_at: READ_ON },
+  { id: 'readme-install', cite: 'README.md', quote: 'gemini extensions install https://github.com/kyisaiah47/parserail-gemini-extension', url: `${PRODUCT.repo}/blob/main/README.md`, read_at: '2026-10-02' },
   { id: 'manifest-server', cite: 'gemini-extension.json', quote: '"mcpServers": {\n    "parserail": {\n      "command": "npx",\n      "args": ["-y", "parserail-mcp"]', url: `${PRODUCT.repo}/blob/main/gemini-extension.json`, read_at: READ_ON },
   { id: 'manifest-context', cite: 'gemini-extension.json', quote: '"contextFileName": "GEMINI.md"', url: `${PRODUCT.repo}/blob/main/gemini-extension.json`, read_at: READ_ON },
   { id: 'manifest-key', cite: 'gemini-extension.json', quote: '"envVar": "PARSERAIL_API_KEY"', url: `${PRODUCT.repo}/blob/main/gemini-extension.json`, read_at: READ_ON },
