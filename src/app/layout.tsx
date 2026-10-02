@@ -7,6 +7,7 @@ import Welcome from '@/components/site-view/Welcome';
 import Mark from '@/components/site-view/Mark';
 import SmoothScroll from '@/components/SmoothScroll';
 import { PRODUCT } from '@/lib/product';
+import Analytics from '@/components/Analytics';
 
 const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], display: 'swap', variable: '--font-mono' });
 const SITE = `https://${PRODUCT.host}`;
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return <html lang="en" className={mono.variable}><body>
+    <Analytics />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       '@context': 'https://schema.org', '@type': 'SoftwareSourceCode', name: PRODUCT.name, url: SITE,
       description: PRODUCT.description, codeRepository: PRODUCT.repo, version: PRODUCT.version,
