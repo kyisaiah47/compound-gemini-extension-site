@@ -42,10 +42,9 @@ export function SimpleFooter() {
         </nav>
         <p className="sv-credit">
           <a href="https://thecompound.tech">
-            Built by
+            <span>Built by Compound Labs</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="studio-credit-mark" src="/brand/compound-labs.svg" alt="Compound Labs" width={20} height={20} />
-            Compound Labs
           </a>
         </p>
       </div>
